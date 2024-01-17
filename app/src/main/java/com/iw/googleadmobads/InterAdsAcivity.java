@@ -16,9 +16,10 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class InterAdsAcivity extends AppCompatActivity {
 
-    Button btnInterads;
+    Button btnInterads, btnTwoInterads;
 
     private InterstitialAd mInterstitialAd;
+    int choice = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +27,31 @@ public class InterAdsAcivity extends AppCompatActivity {
         setContentView(R.layout.activity_inter_ads_acivity);
 
         btnInterads = findViewById(R.id.btnInterads);
+        btnTwoInterads = findViewById(R.id.btnTwoInterads);
 
         loadInter();
         btnInterads.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                choice = 1;
                 if (mInterstitialAd != null) {
                     mInterstitialAd.show(InterAdsAcivity.this);
                 } else {
                     //Button Code Here Like Intent etc...
                 }
+            }
+        });
+
+        btnTwoInterads.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice = 2;
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(InterAdsAcivity.this);
+                } else {
+                    //Button Code Here Like Intent etc...
+                }
+
             }
         });
 
@@ -60,7 +76,19 @@ public class InterAdsAcivity extends AppCompatActivity {
                             @Override
                             public void onAdDismissedFullScreenContent() {
                                 mInterstitialAd = null;
-                                //Button Code Here Like Intent etc...
+
+                                if (choice == 1) {
+                                    //Button Code Here Like Intent etc...
+
+                                    //start & finish()
+                                } else if (choice == 2) {
+                                    //Button Code Here Like Intent etc...
+
+                                    //start
+
+                                    loadInter();
+                                }
+
                             }
 
                             @Override

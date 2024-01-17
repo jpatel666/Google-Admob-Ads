@@ -6,18 +6,14 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".InterAdsAcivity">
+    tools:context=".RewardedAdsActivity">
 
     <Button
-        android:id="@+id/btnInterads"
+        android:id="@+id/btnRewardedads"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Inter Ads"/>
+        android:text="Show Rewarded Ads"/>
 
-    <Button
-        android:id="@+id/btnTwoInterads"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Inter Ads Two"/>
+
 
 </LinearLayout>
