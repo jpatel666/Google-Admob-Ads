@@ -14,7 +14,7 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
-public class InterAdsAcivity extends AppCompatActivity {
+public class InterAdsActivity extends AppCompatActivity {
 
     Button btnInterads, btnTwoInterads;
 
@@ -35,7 +35,7 @@ public class InterAdsAcivity extends AppCompatActivity {
             public void onClick(View v) {
                 choice = 1;
                 if (mInterstitialAd != null) {
-                    mInterstitialAd.show(InterAdsAcivity.this);
+                    mInterstitialAd.show(InterAdsActivity.this);
                 } else {
                     //Button Code Here Like Intent etc...
                 }
@@ -47,7 +47,7 @@ public class InterAdsAcivity extends AppCompatActivity {
             public void onClick(View v) {
                 choice = 2;
                 if (mInterstitialAd != null) {
-                    mInterstitialAd.show(InterAdsAcivity.this);
+                    mInterstitialAd.show(InterAdsActivity.this);
                 } else {
                     //Button Code Here Like Intent etc...
                 }
