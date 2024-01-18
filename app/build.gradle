@@ -35,7 +35,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
 
-
     //Admob Ads
     implementation 'com.google.android.gms:play-services-ads:22.6.0'
 
@@ -52,8 +51,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
-
-
 
 
     testImplementation 'junit:junit:4.13.2'
