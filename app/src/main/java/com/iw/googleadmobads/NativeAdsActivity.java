@@ -8,7 +8,6 @@ import com.google.android.ads.nativetemplates.NativeTemplateStyle;
 import com.google.android.ads.nativetemplates.TemplateView;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.nativead.NativeAd;
 
 public class NativeAdsActivity extends AppCompatActivity {
@@ -22,8 +21,6 @@ public class NativeAdsActivity extends AppCompatActivity {
     }
 
     void loadNative() {
-
-        MobileAds.initialize(this);
         AdLoader adLoader = new AdLoader.Builder(this, getString(R.string.native_id))
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
