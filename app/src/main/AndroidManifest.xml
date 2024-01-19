@@ -16,7 +16,7 @@
         android:theme="@style/Theme.GoogleAdmobAds"
         tools:targetApi="31">
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".InterAdsActivity"
             android:exported="false" />
         <activity
             android:name=".RewardedAdsActivity"
@@ -25,7 +25,7 @@
             android:name=".BannerAdsActivity"
             android:exported="false" />
         <activity
-            android:name=".InterAdsActivity"
+            android:name=".SplashScreenActivity"
             android:exported="false" />
         <activity
             android:name=".NativeAdsActivity"

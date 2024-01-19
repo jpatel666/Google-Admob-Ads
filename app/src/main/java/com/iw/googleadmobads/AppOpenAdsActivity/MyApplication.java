@@ -20,6 +20,7 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.appopen.AppOpenAd;
 import com.google.android.gms.ads.appopen.AppOpenAd.AppOpenAdLoadCallback;
+import com.iw.googleadmobads.R;
 
 import java.util.Date;
 
@@ -101,7 +102,8 @@ public class MyApplication extends Application implements ActivityLifecycleCallb
     private class AppOpenAdManager {
 
         private static final String LOG_TAG = "AppOpenAdManager";
-        private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/9257395921";
+
+      //private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/9257395921";
 
         private AppOpenAd appOpenAd = null;
         private boolean isLoadingAd = false;
@@ -123,7 +125,7 @@ public class MyApplication extends Application implements ActivityLifecycleCallb
 
             isLoadingAd = true;
             AdRequest request = new AdRequest.Builder().build();
-            AppOpenAd.load(context, AD_UNIT_ID, request, new AppOpenAdLoadCallback() {
+            AppOpenAd.load(MyApplication.this,getResources().getString(R.string.appopen_id), request, new AppOpenAdLoadCallback() {
 
                 @Override
                 public void onAdLoaded(AppOpenAd ad) {
