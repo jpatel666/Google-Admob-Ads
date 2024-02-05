@@ -133,16 +133,16 @@ public class MyApplication extends Application implements ActivityLifecycleCallb
                     isLoadingAd = false;
                     loadTime = (new Date()).getTime();
 
-                    Log.d(LOG_TAG, "onAdLoaded.");
-                    Toast.makeText(context, "onAdLoaded", Toast.LENGTH_SHORT).show();
+                    //Log.d(LOG_TAG, "onAdLoaded.");
+                    //Toast.makeText(context, "onAdLoaded", Toast.LENGTH_SHORT).show();
                 }
 
 
                 @Override
                 public void onAdFailedToLoad(LoadAdError loadAdError) {
                     isLoadingAd = false;
-                    Log.d(LOG_TAG, "onAdFailedToLoad: " + loadAdError.getMessage());
-                    Toast.makeText(context, "onAdFailedToLoad", Toast.LENGTH_SHORT).show();
+                    //Log.d(LOG_TAG, "onAdFailedToLoad: " + loadAdError.getMessage());
+                    //Toast.makeText(context, "onAdFailedToLoad", Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -174,20 +174,20 @@ public class MyApplication extends Application implements ActivityLifecycleCallb
         private void showAdIfAvailable(@NonNull final Activity activity, @NonNull OnShowAdCompleteListener onShowAdCompleteListener) {
 
             if (isShowingAd) {
-                Log.d(LOG_TAG, "The app open ad is already showing.");
+                //Log.d(LOG_TAG, "The app open ad is already showing.");
                 return;
             }
 
 
             if (!isAdAvailable()) {
-                Log.d(LOG_TAG, "The app open ad is not ready yet.");
+                //Log.d(LOG_TAG, "The app open ad is not ready yet.");
                 onShowAdCompleteListener.onShowAdComplete();
                 loadAd(currentActivity);
 
                 return;
             }
 
-            Log.d(LOG_TAG, "Will show ad.");
+            //Log.d(LOG_TAG, "Will show ad.");
 
             appOpenAd.setFullScreenContentCallback(new FullScreenContentCallback() {
 
@@ -197,8 +197,8 @@ public class MyApplication extends Application implements ActivityLifecycleCallb
                     appOpenAd = null;
                     isShowingAd = false;
 
-                    Log.d(LOG_TAG, "onAdDismissedFullScreenContent.");
-                    Toast.makeText(activity, "onAdDismissedFullScreenContent", Toast.LENGTH_SHORT).show();
+                    //Log.d(LOG_TAG, "onAdDismissedFullScreenContent.");
+                    //Toast.makeText(activity, "onAdDismissedFullScreenContent", Toast.LENGTH_SHORT).show();
 
                     onShowAdCompleteListener.onShowAdComplete();
                     loadAd(activity);
@@ -210,8 +210,8 @@ public class MyApplication extends Application implements ActivityLifecycleCallb
                     appOpenAd = null;
                     isShowingAd = false;
 
-                    Log.d(LOG_TAG, "onAdFailedToShowFullScreenContent: " + adError.getMessage());
-                    Toast.makeText(activity, "onAdFailedToShowFullScreenContent", Toast.LENGTH_SHORT).show();
+                    //Log.d(LOG_TAG, "onAdFailedToShowFullScreenContent: " + adError.getMessage());
+                    //Toast.makeText(activity, "onAdFailedToShowFullScreenContent", Toast.LENGTH_SHORT).show();
 
                     onShowAdCompleteListener.onShowAdComplete();
                     loadAd(activity);
@@ -221,8 +221,8 @@ public class MyApplication extends Application implements ActivityLifecycleCallb
 
                 @Override
                 public void onAdShowedFullScreenContent() {
-                    Log.d(LOG_TAG, "onAdShowedFullScreenContent.");
-                    Toast.makeText(activity, "onAdShowedFullScreenContent", Toast.LENGTH_SHORT).show();
+                    //Log.d(LOG_TAG, "onAdShowedFullScreenContent.");
+                    //Toast.makeText(activity, "onAdShowedFullScreenContent", Toast.LENGTH_SHORT).show();
                 }
             });
 
